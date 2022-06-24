@@ -84,9 +84,9 @@ Then I created an ECS context for Docker using my already configured AWS CLI wit
 
 Ran `docker compose up` onto the ECS with LB.
 
-To view the frontend: [frontend](http://lol-c-loadb-qj8n2k09lgcs-240da7a2a911aabf.elb.us-east-1.amazonaws.com:8501/)
+To view the frontend: [frontend](http://lol-c-loadb-32q3zki5v3gu-4dd88855484bf80c.elb.us-east-1.amazonaws.com:8501/)
 
-To view the backend docs: [backend](http://lol-c-loadb-qj8n2k09lgcs-240da7a2a911aabf.elb.us-east-1.amazonaws.com:8000/docs)
+To view the backend docs: [backend](http://lol-c-loadb-32q3zki5v3gu-4dd88855484bf80c.elb.us-east-1.amazonaws.com:8000/docs)
 
 Server is currently up and predictions are working!
 

@@ -18,10 +18,9 @@
     1. [Feature Importance](#importance)
     2. [SHAP](#shap)
     3. [Partial Depedency Plots](#pdp)
-==============================
+
 
 ## Project Organization <a name="organize"></a>
-------------
 ```
 ├── LICENSE
 ├── docker-compose.yml <- YAML file which contains docker compose build instructions.
@@ -269,26 +268,36 @@ For the basic modelling approach I split my data into train and testing data wit
 
 Model with metrics:
 
+
 ***Logistic Regression***
+```
 accuracy:  0.5928507861168792
 f1-score:  0.029006013441811106
-**crossvalidation**
+
+with crossvalidation
 accuracy:  0.5545832097300505
 f1-score:  0.07363964449649193
+```
 
 ***Random Forest***
+```
 accuracy:  0.9476416493622071
 f1-score:  0.9356426618049225
-**crossvalidation**
+
+with crossvalidation
 accuracy:  0.5576090180955207
 f1-score:  0.39953069322410173
+```
 
 ***XGBoost Classifier***
+```
 accuracy:  0.9557994660338178
 f1-score:  0.9460926193921853
-**crossvalidation**
+
+with crossvalidation
 accuracy:  0.5441412043903886
 f1-score:  0.46049543758268624
+```
 
 With default parameters the models seem to perform in this order: XGBoost > Random Forest > Logistic Regression
 Overall cross validation did not help any of the models perform any better.
@@ -299,7 +308,7 @@ My first naive approach was to implement a GridSearchCV with given parameter gri
 
 Surprisingly the best model to perform using this approach was the Random Forest! It achieved 57% accuracy and 58% f1-score with the following parameters:
 
-`max_depth`: 30
+`max_depth`: 30,
 `n_estimators`: 5
 
 GridSearch did not do me enough justice therefore I decided to explore further with a module I just recently learned about, Optuna.
@@ -311,16 +320,18 @@ Optuna makes use of the Tree-structed Parzen Estimator algorithm. To set up Optu
 Results using Optuna:
 
 ***XGBoost Classifier***
-accuracy: 0.9574310293681401.
-f1-score: 0.9470013947001394
-precision: 0.9285470085470086
-recall:  0.9662041977943793
+```
+accuracy: 0.9574310293681401,
+f1-score: 0.9470013947001394,
+precision: 0.9285470085470086,
+recall:  0.9662041977943793,
 
 Hyperparameters:
-`scaler`: Robust
-`max_depth`: 20
-`learning_rate`: 0.00719580052831331
-`n_estimators`: 198
+scaler: Robust
+max_depth: 20
+learning_rate: 0.00719580052831331
+n_estimators: 198
+```
 
 So I've managed to squeeze out an extra 0.1-0.2% of performance for my XGBoost model for accuracy and f1, that's pretty good!
 
@@ -359,8 +370,3 @@ To prove these assumptions I need to implement partial dependency plots. Partial
 The Partial Dependency Plots show negative linear relationships amongst the several inputs vs. the target variable. This means that churn depends linearly on rank I, and patch 12.8.437.6765. For losses though it's much harder to interpret, but overall even though the relationship is not linear it leans towards negative correlation as the amount of losses increase. The probability that a summoner churns decreases when a summoner is categorized in either of these features.
 
 Could it be that lower ranked players are actually less likely to quit the game? My original assumptions were that lower leveled/lower skilled players were more likely to give up the game after some frustration. Also another interesting one is that patch 12.8 which introduced many buffs/nerfs to the game seemed to have a huge impact on the predictions.
-
-
-
-
-# lol-churn-prediction

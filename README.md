@@ -109,8 +109,11 @@ You can access the jupyter notebook here: [Extraction](notebooks/v1.0_LoL_Churn_
 Several endpoints were used to gather the data.
 
 `LEAGUE-V4`: https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntries
+
 `SUMMONER-V4`: https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerName
+
 `MATCH-V5`: https://developer.riotgames.com/apis#match-v5/GET_getMatchIdsByPUUID
+
 `MATCH-V5`: https://developer.riotgames.com/apis#match-v5/GET_getMatch
 
 ### Requesting Data <a name="req"></a>

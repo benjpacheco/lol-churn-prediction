@@ -13,7 +13,7 @@
 5. [Modelling](#model)
     1. [Feature Engineering](#engineering)
     2. [Basic Modelling](#basic)
-    3. [Hyperparameter Tuning](htuning)
+    3. [Hyperparameter Tuning](#htuning)
 6. [Insights](#insight)
     1. [Feature Importance](#importance)
     2. [SHAP](#shap)

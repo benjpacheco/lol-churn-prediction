@@ -64,15 +64,17 @@
         └── train_model.py
 ```
 
-### Setup <a name="setup"></a>
+## Setup <a name="setup"></a>
 
 In order to access the analysis in the notebooks please follow the below steps:
 
-1. cd into the directory folder `Lol_Churn_Prediction`
+1. clone this repository with `git clone https://github.com/benjpacheco/lol-churn-prediction.git`
 
-2. create and activate your conda or virtualenv for this project
+2. cd into the directory folder 
 
-3. run: `pip install -r requirements.txt` in your shell
+3. create and activate your conda or virtualenv for this project
+
+4. run: `pip install -r requirements.txt` in your shell
 
 ### Deployment <a name="deploy"></a>
 
@@ -88,7 +90,7 @@ To view the frontend: [frontend](http://lol-c-loadb-32q3zki5v3gu-4dd88855484bf80
 
 To view the backend docs: [backend](http://lol-c-loadb-32q3zki5v3gu-4dd88855484bf80c.elb.us-east-1.amazonaws.com:8000/docs)
 
-Server is currently up and predictions are working!
+Server is currently down due to AWS incurring costs if you would like a preview of the app please contact me benjijosepacheco@gmail.com here for a localhost demo.
 
 ## Objective <a name="objective"></a>
 
